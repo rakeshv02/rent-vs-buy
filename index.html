@@ -1,36 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rent vs Buy Calculator — Is It Better to Rent or Buy a Home? | Tabutility</title>
-    <meta name="description" content="Free rent vs buy calculator. Find out whether renting or buying a home makes more financial sense for your situation. Compares total costs, break-even point, home equity, and opportunity cost. No sign-up." />
-    <meta name="keywords" content="rent vs buy calculator, should i rent or buy, rent or buy home, rent vs buy comparison, home buying calculator, renting vs buying a house, break even rent vs buy" />
-    <link rel="canonical" href="https://rent-vs-buy.tabutility.com/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rent-vs-buy.tabutility.com/" />
-    <meta property="og:title" content="Rent vs Buy Calculator — Is It Better to Rent or Buy?" />
-    <meta property="og:description" content="Find out whether renting or buying a home makes more financial sense. Compares total costs and break-even point. Free, no sign-up." />
-    <meta property="og:site_name" content="Tabutility" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Rent vs Buy Calculator — Is It Better to Rent or Buy?" />
-    <meta name="twitter:description" content="Find out whether renting or buying makes more financial sense. Free, no sign-up." />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏡</text></svg>" />
-    <meta name="robots" content="index, follow" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-78VZWJ5B1W');
-    </script>
-    <script type="application/ld+json">
-    { "@context": "https://schema.org", "@type": "WebApplication", "name": "Rent vs Buy Calculator", "url": "https://rent-vs-buy.tabutility.com", "description": "Free rent vs buy calculator. Find out whether renting or buying a home makes more financial sense.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "provider": { "@type": "Organization", "name": "Tabutility", "url": "https://tabutility.com" } }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rent vs Buy Calculator — Tabutility</title>
+<meta name="description" content="Free rent vs buy calculator. Compare the long-term cost of renting versus buying a home over any time horizon."/>
+<meta name="keywords" content="rent vs buy calculator, should i rent or buy, rent or buy home calculator, cost of renting vs buying"/>
+<link rel="canonical" href="https://rent-vs-buy.tabutility.com/"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏡</text></svg>"/>
+<meta property="og:title" content="Rent vs Buy Calculator"/>
+<meta property="og:description" content="Compare the long-term cost of renting versus buying a home."/>
+<meta property="og:url" content="https://rent-vs-buy.tabutility.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Tabutility"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Rent vs Buy Calculator"/>
+<meta name="twitter:description" content="Compare the long-term cost of renting versus buying a home."/>
+<meta name="robots" content="index, follow"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-78VZWJ5B1W');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Rent vs Buy Calculator","url":"https://rent-vs-buy.tabutility.com/","description":"Free rent vs buy calculator. Compare the long-term cost of renting versus buying a home over any time horizon.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://tabutility.com"},{"@type":"ListItem","position":3,"name":"Rent vs Buy Calculator","item":"https://rent-vs-buy.tabutility.com/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should I rent or buy?","acceptedAnswer":{"@type":"Answer","text":"It depends on your local market, how long you plan to stay, and your financial situation — this calculator helps you compare the numbers."}},{"@type":"Question","name":"What assumptions does it use?","acceptedAnswer":{"@type":"Answer","text":"You input the key assumptions including appreciation, rent growth and investment returns."}},{"@type":"Question","name":"Is the Rent vs Buy Calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free, no sign-up needed."}},{"@type":"Question","name":"Does it work on mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes — works on any device."}}]}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f172a;color:#f1f5f9;min-height:100vh}
+nav{background:#1e293b;border-bottom:1px solid #334155;padding:14px 24px;display:flex;align-items:center;gap:16px}
+nav a{color:#94a3b8;text-decoration:none;font-size:14px}
+nav a:hover{color:#f1f5f9}
+nav .brand{color:#38bdf8;font-weight:700;font-size:18px}
+.ad-banner{background:#1e293b;border-bottom:1px solid #334155;padding:4px;text-align:center}
+#app{max-width:800px;margin:8px auto;padding:0 16px 40px}
+h1{font-size:26px;font-weight:700;color:#f1f5f9;margin:24px 0 6px;text-align:center}
+.subtitle{color:#94a3b8;font-size:14px;text-align:center;margin-bottom:24px}
+.inputs-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:20px 24px;margin-bottom:16px}
+.card-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+.card-title.buy{color:#38bdf8}
+.card-title.rent{color:#a78bfa}
+label{display:block;font-size:12px;font-weight:600;color:#94a3b8;margin-bottom:5px;text-transform:uppercase;letter-spacing:.04em;margin-top:12px}
+label:first-of-type{margin-top:0}
+.input-group{position:relative}
+.input-prefix{position:absolute;left:10px;top:50%;transform:translateY(-50%);font-size:14px;color:#64748b}
+.input-suffix{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:12px;color:#64748b}
+input[type="number"]{width:100%;background:#0f172a;border:1px solid #334155;border-radius:8px;padding:10px 32px 10px 30px;color:#f1f5f9;font-size:15px;outline:none;-moz-appearance:textfield;transition:border-color .2s}
+input.no-pfx{padding-left:12px}
+input[type="number"]:focus{border-color:#38bdf8}
+input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none}
+.btn{display:block;width:100%;background:#38bdf8;color:#0f172a;border:none;border-radius:8px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;margin-top:4px;transition:background .2s}
+.btn:hover{background:#0ea5e9}
+.winner-box{border-radius:14px;padding:20px 24px;text-align:center;margin-bottom:16px}
+.winner-box .label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.8;margin-bottom:6px}
+.winner-box .title{font-size:22px;font-weight:800;margin-bottom:4px}
+.winner-box .desc{font-size:13px;opacity:.85}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.cmp{border-radius:10px;padding:16px;text-align:center}
+.cmp.buy-c{background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.3)}
+.cmp.rent-c{background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.3)}
+.cmp .val{font-size:22px;font-weight:700}
+.cmp.buy-c .val{color:#38bdf8}
+.cmp.rent-c .val{color:#a78bfa}
+.cmp .lbl{font-size:11px;color:#94a3b8;margin-top:4px;text-transform:uppercase;letter-spacing:.04em}
+.yr-table{width:100%;border-collapse:collapse;font-size:12px}
+.yr-table th{padding:7px 10px;color:#64748b;font-size:11px;text-transform:uppercase;font-weight:600;border-bottom:1px solid #334155;text-align:right}
+.yr-table th:first-child{text-align:left}
+.yr-table td{padding:7px 10px;border-bottom:1px solid #1a2540;color:#cbd5e1;text-align:right}
+.yr-table td:first-child{text-align:left;color:#94a3b8}
+.yr-table tr.winner-row td{font-weight:700}
+.hidden{display:none}
+@media(max-width:580px){.inputs-grid{grid-template-columns:1fr}.compare-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><span class="brand">⚡ Tabutility</span><a href="https://tabutility.com">← All Tools</a></nav>
+<div class="ad-banner"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+<div id="app">
+  <h1>🏡 Rent vs Buy Calculator</h1>
+  <p class="subtitle">Compare the true long-term cost of renting versus buying</p>
+
+  <div class="inputs-grid">
+    <div class="card">
+      <div class="card-title buy">🏠 Buying</div>
+      <label>Home Price</label>
+      <div class="input-group"><span class="input-prefix">$</span><input type="number" id="home-price" placeholder="400000" min="0" step="1000"/></div>
+      <label>Down Payment</label>
+      <div class="input-group"><span class="input-prefix">$</span><input type="number" id="down-payment" placeholder="80000" min="0" step="1000"/></div>
+      <label>Mortgage Rate (%/yr)</label>
+      <div class="input-group"><span class="input-prefix" style="font-size:13px;color:#94a3b8">%</span><input type="number" id="mort-rate" placeholder="4.5" step="0.1" min="0"/></div>
+      <label>Home Appreciation (%/yr)</label>
+      <div class="input-group"><span class="input-prefix" style="font-size:13px;color:#94a3b8">%</span><input type="number" id="appreciation" placeholder="3" step="0.1"/></div>
+      <label>Annual Maintenance (%)</label>
+      <div class="input-group"><span class="input-prefix" style="font-size:13px;color:#94a3b8">%</span><input type="number" id="maintenance" placeholder="1" step="0.1" min="0"/></div>
+    </div>
+    <div class="card">
+      <div class="card-title rent">🏘️ Renting</div>
+      <label>Monthly Rent</label>
+      <div class="input-group"><span class="input-prefix">$</span><input type="number" id="monthly-rent" placeholder="2000" min="0" step="50"/></div>
+      <label>Annual Rent Increase (%)</label>
+      <div class="input-group"><span class="input-prefix" style="font-size:13px;color:#94a3b8">%</span><input type="number" id="rent-increase" placeholder="3" step="0.1" min="0"/></div>
+      <label>Investment Return (%/yr)</label>
+      <div class="input-group"><span class="input-prefix" style="font-size:13px;color:#94a3b8">%</span><input type="number" id="invest-return" placeholder="7" step="0.1"/></div>
+      <label>Time Horizon (years)</label>
+      <div class="input-group"><input type="number" id="years" placeholder="10" min="1" max="50" class="no-pfx"/></div>
+    </div>
+  </div>
+  <button class="btn" onclick="calculate()">Compare Rent vs Buy</button>
+
+  <div id="results" class="hidden" style="margin-top:16px">
+    <div class="winner-box" id="winner-box">
+      <div class="label" id="winner-label">Result</div>
+      <div class="title" id="winner-title">—</div>
+      <div class="desc" id="winner-desc">—</div>
+    </div>
+    <div class="compare-grid">
+      <div class="cmp buy-c"><div class="val" id="r-buy-cost">$0</div><div class="lbl">Net Cost of Buying</div></div>
+      <div class="cmp rent-c"><div class="val" id="r-rent-cost">$0</div><div class="lbl">Net Cost of Renting</div></div>
+    </div>
+    <div class="card">
+      <div style="font-size:13px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Year-by-Year Breakdown</div>
+      <div style="overflow-x:auto">
+        <table class="yr-table">
+          <thead><tr><th>Year</th><th>Buy Net Cost</th><th>Rent Net Cost</th><th>Difference</th></tr></thead>
+          <tbody id="yr-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:860px;margin-left:auto;margin-right:auto;margin-top:24px;margin-bottom:8px;padding:0 16px">
+  <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 24px">
+    <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px">Related Tools</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+      <a href="https://mortgage-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Mortgage Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div>
+      </a>
+      <a href="https://rental-yield.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Rental Yield Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div>
+      </a>
+      <a href="https://compound-interest-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Compound Interest</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div>
+      </a>
+      <a href="https://uk-stamp-duty-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Stamp Duty Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div style="max-width:860px;margin-left:auto;margin-right:auto;margin-top:8px;margin-bottom:24px;padding:0 16px">
+  <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 24px">
+    <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Frequently Asked Questions</h2>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Should I rent or buy?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">It depends on your local market, how long you plan to stay, and your financial situation — this calculator helps you compare the numbers.</div>
+    </div>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">What assumptions does it use?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">You input the key assumptions including appreciation, rent growth and investment returns.</div>
+    </div>
+    <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Is this free?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Yes — completely free, no sign-up needed.</div>
+    </div>
+    <div style="padding:14px 0">
+      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Works on mobile?</div>
+      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Yes — works on any device.</div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;padding:8px">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+
+<script>
+function calculate() {
+  const homePrice = parseFloat(document.getElementById('home-price').value);
+  const downPayment = parseFloat(document.getElementById('down-payment').value) || 0;
+  const mortRate = parseFloat(document.getElementById('mort-rate').value) / 100 / 12;
+  const appPct = parseFloat(document.getElementById('appreciation').value) / 100;
+  const maintPct = parseFloat(document.getElementById('maintenance').value) / 100 || 0.01;
+  const monthlyRent = parseFloat(document.getElementById('monthly-rent').value);
+  const rentInc = parseFloat(document.getElementById('rent-increase').value) / 100;
+  const investRet = parseFloat(document.getElementById('invest-return').value) / 100;
+  const years = parseInt(document.getElementById('years').value);
+
+  if (!homePrice||!monthlyRent||!years) { alert('Please fill in all required fields.'); return; }
+
+  const principal = homePrice - downPayment;
+  const n = years * 12;
+  const mortMonths = Math.min(n, 30*12);
+  const r = mortRate;
+
+  // Monthly mortgage payment
+  let mortPayment = 0;
+  if (r > 0 && principal > 0) mortPayment = principal * r * Math.pow(1+r,30*12) / (Math.pow(1+r,30*12)-1);
+  else if (principal > 0) mortPayment = principal / (30*12);
+
+  // Year by year
+  const tbody = document.getElementById('yr-tbody');
+  tbody.innerHTML = '';
+  let homeValue = homePrice;
+  let loanBalance = principal;
+  let totalBuyCost = downPayment; // down payment is upfront opportunity cost
+  let rentPortfolio = downPayment; // renter invests down payment
+  let currentRent = monthlyRent;
+  let totalRentPaid = 0;
+
+  const rows = [];
+  for (let y = 1; y <= years; y++) {
+    let yearlyMort = 0, yearlyMaint = 0;
+    for (let m = 1; m <= 12; m++) {
+      const interest = loanBalance * r;
+      const princPay = mortPayment - interest;
+      loanBalance = Math.max(0, loanBalance - princPay);
+      yearlyMort += mortPayment;
+      yearlyMaint += homeValue * maintPct / 12;
+    }
+    homeValue *= (1 + appPct);
+    totalBuyCost += yearlyMort + yearlyMaint;
+
+    // Rent side
+    for (let m = 1; m <= 12; m++) {
+      totalRentPaid += currentRent;
+      // renter invests the difference each month (mort+maint vs rent)
+      const monthlyMaint = homeValue * maintPct / 12;
+      const diff = Math.max(0, mortPayment + monthlyMaint - currentRent);
+      rentPortfolio = rentPortfolio * (1 + investRet/12) + diff;
+    }
+    currentRent *= (1 + rentInc);
+
+    // Net cost of buying = total paid - equity gained
+    const equity = homeValue - Math.max(0, loanBalance);
+    const buyNetCost = totalBuyCost - equity + downPayment;
+
+    // Net cost of renting = total rent paid - portfolio value
+    const rentNetCost = totalRentPaid - rentPortfolio + downPayment;
+
+    rows.push({y, buyNetCost, rentNetCost});
+  }
+
+  const lastRow = rows[rows.length-1];
+  const buyWins = lastRow.buyNetCost < lastRow.rentNetCost;
+  const diff = Math.abs(lastRow.rentNetCost - lastRow.buyNetCost);
+
+  const winner = document.getElementById('winner-box');
+  if (buyWins) {
+    winner.style.background = 'rgba(56,189,248,0.1)';
+    winner.style.border = '1px solid rgba(56,189,248,0.3)';
+    document.getElementById('winner-label').textContent = `After ${years} years — Buying is cheaper`;
+    document.getElementById('winner-title').textContent = '🏠 Buying Wins';
+    document.getElementById('winner-desc').textContent = `Buying saves you ~$${Math.round(diff).toLocaleString()} over ${years} years.`;
+  } else {
+    winner.style.background = 'rgba(167,139,250,0.1)';
+    winner.style.border = '1px solid rgba(167,139,250,0.3)';
+    document.getElementById('winner-label').textContent = `After ${years} years — Renting is cheaper`;
+    document.getElementById('winner-title').textContent = '🏘️ Renting Wins';
+    document.getElementById('winner-desc').textContent = `Renting saves you ~$${Math.round(diff).toLocaleString()} over ${years} years.`;
+  }
+
+  document.getElementById('r-buy-cost').textContent = '$' + Math.round(lastRow.buyNetCost).toLocaleString();
+  document.getElementById('r-rent-cost').textContent = '$' + Math.round(lastRow.rentNetCost).toLocaleString();
+
+  rows.forEach(row => {
+    const tr = document.createElement('tr');
+    const d = row.buyNetCost - row.rentNetCost;
+    const dStr = (d < 0 ? '🏠 $' : '🏘️ $') + Math.round(Math.abs(d)).toLocaleString();
+    tr.innerHTML = `<td>${row.y}</td><td>$${Math.round(row.buyNetCost).toLocaleString()}</td><td>$${Math.round(row.rentNetCost).toLocaleString()}</td><td>${dStr}</td>`;
+    tbody.appendChild(tr);
+  });
+
+  document.getElementById('results').classList.remove('hidden');
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+</script>
+</body>
 </html>
