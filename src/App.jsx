@@ -111,12 +111,12 @@ export default function App() {
       <div className="no-print" style={{ background: "#fff", borderBottom: "1px solid #e5e7eb", padding: "16px 24px" }}>
         <div style={{ maxWidth: "860px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <a href="https://tabutility.com" style={{ fontSize: "15px", fontWeight: "700", color: "#6366f1", textDecoration: "none" }}>⌘ Tabutility</a>
-          <button onClick={() => window.print()} style={{ padding: "8px 18px", background: "#0f172a", color: "#fff", border: "none", borderRadius: "8px", fontSize: "13px", fontWeight: "700", cursor: "pointer" }}>🖨️ Print / Save PDF</button>
+          <button onClick={() => window.print()} style={{ padding: "8px 18px", background: "#f8f7f4", color: "#fff", border: "none", borderRadius: "8px", fontSize: "13px", fontWeight: "700", cursor: "pointer" }}>🖨️ Print / Save PDF</button>
         </div>
       </div>
 
       <div style={{ maxWidth: "860px", margin: "0 auto", padding: "32px 16px" }}>
-        <h1 style={{ fontSize: "30px", fontWeight: "900", color: "#0f172a", margin: "0 0 6px" }}>Rent vs Buy Calculator</h1>
+        <h1 style={{ fontSize: "30px", fontWeight: "900", color: "#f8f7f4", margin: "0 0 6px" }}>Rent vs Buy Calculator</h1>
         <p style={{ fontSize: "15px", color: "#6b7280", margin: "0 0 28px" }}>Find out whether renting or buying makes more financial sense for your situation.</p>
 
         {/* Inputs */}
@@ -125,7 +125,7 @@ export default function App() {
           <div style={{ background: "#fff", borderRadius: "16px", padding: "22px", boxShadow: "0 1px 4px rgba(0,0,0,0.08)" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "16px" }}>
               <span style={{ fontSize: "20px" }}>🏠</span>
-              <h2 style={{ margin: 0, fontSize: "16px", fontWeight: "800", color: "#0f172a" }}>Buying</h2>
+              <h2 style={{ margin: 0, fontSize: "16px", fontWeight: "800", color: "#f8f7f4" }}>Buying</h2>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
               <div>
@@ -178,7 +178,7 @@ export default function App() {
           <div style={{ background: "#fff", borderRadius: "16px", padding: "22px", boxShadow: "0 1px 4px rgba(0,0,0,0.08)" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "16px" }}>
               <span style={{ fontSize: "20px" }}>🏢</span>
-              <h2 style={{ margin: 0, fontSize: "16px", fontWeight: "800", color: "#0f172a" }}>Renting</h2>
+              <h2 style={{ margin: 0, fontSize: "16px", fontWeight: "800", color: "#f8f7f4" }}>Renting</h2>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
               <div>
@@ -312,7 +312,7 @@ export default function App() {
               <a key={r.label} href={r.url} target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "14px", background: "#f9fafb", borderRadius: "10px", border: "1px solid #e5e7eb", textDecoration: "none", transition: "all 0.2s" }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor = "#6366f1"; e.currentTarget.style.background = "#f5f3ff"; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = "#e5e7eb"; e.currentTarget.style.background = "#f9fafb"; }}>
-                <div style={{ fontSize: "13px", fontWeight: "700", color: "#0f172a", marginBottom: "3px" }}>{r.label}</div>
+                <div style={{ fontSize: "13px", fontWeight: "700", color: "#f8f7f4", marginBottom: "3px" }}>{r.label}</div>
                 <div style={{ fontSize: "11px", fontWeight: "700", color: "#6366f1", textTransform: "uppercase" }}>via {r.source} →</div>
               </a>
             ))}
